@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.19.1">
+<meta name="crystal_docs.project_version" content="main">
+<meta name="crystal_docs.project_name" content="nanoarrow">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="nanoarrow">
+  <title>Nanoarrow::ArrayBase(T) - nanoarrow main</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          nanoarrow
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="nanoarrow/Nanoarrow" data-name="nanoarrow">
+      <a href="../Nanoarrow.html">Nanoarrow</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="nanoarrow/Nanoarrow/ArrayBase" data-name="nanoarrow::arraybase(t)">
+      <a href="../Nanoarrow/ArrayBase.html">ArrayBase</a>
+      
+    </li>
+  
+  <li class=" " data-id="nanoarrow/Nanoarrow/BoolArray" data-name="nanoarrow::boolarray">
+      <a href="../Nanoarrow/BoolArray.html">BoolArray</a>
+      
+    </li>
+  
+  <li class=" " data-id="nanoarrow/Nanoarrow/Error" data-name="nanoarrow::error">
+      <a href="../Nanoarrow/Error.html">Error</a>
+      
+    </li>
+  
+  <li class=" " data-id="nanoarrow/Nanoarrow/Float32Array" data-name="nanoarrow::float32array">
+      <a href="../Nanoarrow/Float32Array.html">Float32Array</a>
+      
+    </li>
+  
+  <li class=" " data-id="nanoarrow/Nanoarrow/Float64Array" data-name="nanoarrow::float64array">
+      <a href="../Nanoarrow/Float64Array.html">Float64Array</a>
+      
+    </li>
+  
+  <li class=" " data-id="nanoarrow/Nanoarrow/Int32Array" data-name="nanoarrow::int32array">
+      <a href="../Nanoarrow/Int32Array.html">Int32Array</a>
+      
+    </li>
+  
+  <li class=" " data-id="nanoarrow/Nanoarrow/Int64Array" data-name="nanoarrow::int64array">
+      <a href="../Nanoarrow/Int64Array.html">Int64Array</a>
+      
+    </li>
+  
+  <li class=" " data-id="nanoarrow/Nanoarrow/Schema" data-name="nanoarrow::schema">
+      <a href="../Nanoarrow/Schema.html">Schema</a>
+      
+    </li>
+  
+  <li class=" " data-id="nanoarrow/Nanoarrow/StringArray" data-name="nanoarrow::stringarray">
+      <a href="../Nanoarrow/StringArray.html">StringArray</a>
+      
+    </li>
+  
+  <li class=" " data-id="nanoarrow/Nanoarrow/UInt32Array" data-name="nanoarrow::uint32array">
+      <a href="../Nanoarrow/UInt32Array.html">UInt32Array</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    abstract class
+  </span> Nanoarrow::<wbr>ArrayBase(T)
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Nanoarrow/ArrayBase.html">Nanoarrow::ArrayBase(T)</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type">Enumerable(T?)</li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="direct-known-subclasses" class="anchor" href="#direct-known-subclasses">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Direct Known Subclasses
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="../Nanoarrow/BoolArray.html">Nanoarrow::BoolArray</a></li>
+    
+      <li class="other-type"><a href="../Nanoarrow/Float32Array.html">Nanoarrow::Float32Array</a></li>
+    
+      <li class="other-type"><a href="../Nanoarrow/Float64Array.html">Nanoarrow::Float64Array</a></li>
+    
+      <li class="other-type"><a href="../Nanoarrow/Int32Array.html">Nanoarrow::Int32Array</a></li>
+    
+      <li class="other-type"><a href="../Nanoarrow/Int64Array.html">Nanoarrow::Int64Array</a></li>
+    
+      <li class="other-type"><a href="../Nanoarrow/StringArray.html">Nanoarrow::StringArray</a></li>
+    
+      <li class="other-type"><a href="../Nanoarrow/UInt32Array.html">Nanoarrow::UInt32Array</a></li>
+    
+  </ul>
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/kojix2/nanoarrow.cr/blob/86265a34de800eb8b0e4fecf72ce4eab5333b527/src/nanoarrow/array.cr#L5" target="_blank">
+        nanoarrow/array.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28ptr%3APointer%28LibNanoarrowBridge%3A%3AArrowArray%29%29-class-method" class="signature"><strong>.new</strong>(ptr : Pointer(LibNanoarrowBridge::ArrowArray))</a>
+        
+      </li>
+    
+  </ul>
+
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#%5B%5D%28index%3AInt%29%3AT%7CNil-instance-method" class="signature"><strong>#[]</strong>(index : Int) : T | Nil</a>
+        
+          <div class="summary"><p>Returns the element at <em>index</em>, supporting negative indices.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#%5B%5D%28range%3ARange%29%3AArray%28T%7CNil%29-instance-method" class="signature"><strong>#[]</strong>(range : Range) : Array(T | Nil)</a>
+        
+          <div class="summary"><p>Returns the sub-array for the given Range, supporting negative indices.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#compact%3AArray%28T%29-instance-method" class="signature"><strong>#compact</strong> : Array(T)</a>
+        
+          <div class="summary"><p>Returns a new Array containing only non-null values.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#each%28%26%3AT%7CNil-%3E%29%3ANil-instance-method" class="signature"><strong>#each</strong>(& : T | Nil -> ) : Nil</a>
+        
+          <div class="summary"><p>Yields each element (nil for null entries).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#empty%3F%3ABool-instance-method" class="signature"><strong>#empty?</strong> : Bool</a>
+        
+          <div class="summary"><p>Returns <code>true</code> if <code>self</code> does not contain any element.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#finalize-instance-method" class="signature"><strong>#finalize</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#inspect%28io%3AIO%29%3ANil-instance-method" class="signature"><strong>#inspect</strong>(io : IO) : Nil</a>
+        
+          <div class="summary"><p>Appends a String representation of this object which includes its class name, its object address and the values of all instance variables.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#length%3AInt64-instance-method" class="signature"><strong>#length</strong> : Int64</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#null%3F%28index%3AInt%29%3ABool-instance-method" class="signature"><strong>#null?</strong>(index : Int) : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#null_count%3AInt64-instance-method" class="signature"><strong>#null_count</strong> : Int64</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ptr%3APointer%28LibNanoarrowBridge%3A%3AArrowArray%29-instance-method" class="signature"><strong>#ptr</strong> : Pointer(LibNanoarrowBridge::ArrowArray)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#release%3ANil-instance-method" class="signature"><strong>#release</strong> : Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#released%3F%3ABool-instance-method" class="signature"><strong>#released?</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#size%3AInt64-instance-method" class="signature"><strong>#size</strong> : Int64</a>
+        
+          <div class="summary"><p>Returns the number of elements in the collection.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_s%28io%3AIO%29%3ANil-instance-method" class="signature"><strong>#to_s</strong>(io : IO) : Nil</a>
+        
+          <div class="summary"><p>Appends a short String representation of this object which includes its class name and its object address.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_unsafe%3APointer%28LibNanoarrowBridge%3A%3AArrowArray%29-instance-method" class="signature"><strong>#to_unsafe</strong> : Pointer(LibNanoarrowBridge::ArrowArray)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#unsafe_get%28index%3AInt64%29%3AT%7CNil-instance-method" class="signature"><strong>#unsafe_get</strong>(index : Int64) : T | Nil</a>
+        
+          <div class="summary"><p>Subclasses implement raw element access (index is already bounds-checked).</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <div class="methods-inherited">
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+  </div>
+
+  
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(ptr:Pointer(LibNanoarrowBridge::ArrowArray))-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(ptr : Pointer(LibNanoarrowBridge::ArrowArray))
+
+        <a class="method-permalink" href="#new%28ptr%3APointer%28LibNanoarrowBridge%3A%3AArrowArray%29%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/nanoarrow.cr/blob/86265a34de800eb8b0e4fecf72ce4eab5333b527/src/nanoarrow/array.cr#L10" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="[](index:Int):T|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>[]</strong>(index : Int) : T | Nil
+
+        <a class="method-permalink" href="#%5B%5D%28index%3AInt%29%3AT%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the element at <em>index</em>, supporting negative indices.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/nanoarrow.cr/blob/86265a34de800eb8b0e4fecf72ce4eab5333b527/src/nanoarrow/array.cr#L17" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="[](range:Range):Array(T|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>[]</strong>(range : Range) : Array(T | Nil)
+
+        <a class="method-permalink" href="#%5B%5D%28range%3ARange%29%3AArray%28T%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the sub-array for the given Range, supporting negative indices.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/nanoarrow.cr/blob/86265a34de800eb8b0e4fecf72ce4eab5333b527/src/nanoarrow/array.cr#L65" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="compact:Array(T)-instance-method">
+      <div class="signature">
+        
+        def <strong>compact</strong> : Array(T)
+
+        <a class="method-permalink" href="#compact%3AArray%28T%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns a new Array containing only non-null values.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/nanoarrow.cr/blob/86265a34de800eb8b0e4fecf72ce4eab5333b527/src/nanoarrow/array.cr#L53" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="each(&amp;:T|Nil-&gt;):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>each</strong>(& : T | Nil -> ) : Nil
+
+        <a class="method-permalink" href="#each%28%26%3AT%7CNil-%3E%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Yields each element (nil for null entries). Provides the full Enumerable API.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/nanoarrow.cr/blob/86265a34de800eb8b0e4fecf72ce4eab5333b527/src/nanoarrow/array.cr#L41" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="empty?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>empty?</strong> : Bool
+
+        <a class="method-permalink" href="#empty%3F%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from module Enumerable(T?)
+            </div>
+          
+          <p>Returns <code>true</code> if <code>self</code> does not contain any element.</p>
+<pre><code class="language-crystal">(<span class="o">[]</span> <span class="k">of</span> <span class="t">Int32</span>).empty? <span class="c"># =&gt; true</span>
+([<span class="n">1</span>]).empty?         <span class="c"># =&gt; false</span>
+[<span class="n">nil</span>, <span class="n">false</span>].empty?  <span class="c"># =&gt; false</span></code></pre>
+<ul>
+<li><code>#present?</code> returns the inverse.</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/nanoarrow.cr/blob/86265a34de800eb8b0e4fecf72ce4eab5333b527/src/nanoarrow/array.cr#L36" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="finalize-instance-method">
+      <div class="signature">
+        
+        def <strong>finalize</strong>
+
+        <a class="method-permalink" href="#finalize-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/nanoarrow.cr/blob/86265a34de800eb8b0e4fecf72ce4eab5333b527/src/nanoarrow/array.cr#L87" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="inspect(io:IO):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>inspect</strong>(io : IO) : Nil
+
+        <a class="method-permalink" href="#inspect%28io%3AIO%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class Reference
+            </div>
+          
+          <p>Appends a String representation of this object
+which includes its class name, its object address
+and the values of all instance variables.</p>
+<pre><code class="language-crystal"><span class="k">class</span> <span class="t">Person</span>
+  <span class="k">def</span> <span class="m">initialize</span>(@name : <span class="t">String</span>, @age : <span class="t">Int32</span>)
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="t">Person</span>.new(<span class="s">&quot;John&quot;</span>, <span class="n">32</span>).inspect <span class="c"># =&gt; #&lt;Person:0x10fd31f20 @name=&quot;John&quot;, @age=32&gt;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/nanoarrow.cr/blob/86265a34de800eb8b0e4fecf72ce4eab5333b527/src/nanoarrow/array.cr#L91" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="length:Int64-instance-method">
+      <div class="signature">
+        
+        def <strong>length</strong> : Int64
+
+        <a class="method-permalink" href="#length%3AInt64-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/nanoarrow.cr/blob/86265a34de800eb8b0e4fecf72ce4eab5333b527/src/nanoarrow/array.cr#L24" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="null?(index:Int):Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>null?</strong>(index : Int) : Bool
+
+        <a class="method-permalink" href="#null%3F%28index%3AInt%29%3ABool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/nanoarrow.cr/blob/86265a34de800eb8b0e4fecf72ce4eab5333b527/src/nanoarrow/array.cr#L45" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="null_count:Int64-instance-method">
+      <div class="signature">
+        
+        def <strong>null_count</strong> : Int64
+
+        <a class="method-permalink" href="#null_count%3AInt64-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/nanoarrow.cr/blob/86265a34de800eb8b0e4fecf72ce4eab5333b527/src/nanoarrow/array.cr#L32" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ptr:Pointer(LibNanoarrowBridge::ArrowArray)-instance-method">
+      <div class="signature">
+        
+        def <strong>ptr</strong> : Pointer(LibNanoarrowBridge::ArrowArray)
+
+        <a class="method-permalink" href="#ptr%3APointer%28LibNanoarrowBridge%3A%3AArrowArray%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/nanoarrow.cr/blob/86265a34de800eb8b0e4fecf72ce4eab5333b527/src/nanoarrow/array.cr#L8" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="release:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>release</strong> : Nil
+
+        <a class="method-permalink" href="#release%3ANil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/nanoarrow.cr/blob/86265a34de800eb8b0e4fecf72ce4eab5333b527/src/nanoarrow/array.cr#L83" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="released?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>released?</strong> : Bool
+
+        <a class="method-permalink" href="#released%3F%3ABool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/nanoarrow.cr/blob/86265a34de800eb8b0e4fecf72ce4eab5333b527/src/nanoarrow/array.cr#L79" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="size:Int64-instance-method">
+      <div class="signature">
+        
+        def <strong>size</strong> : Int64
+
+        <a class="method-permalink" href="#size%3AInt64-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from module Enumerable(T?)
+            </div>
+          
+          <p>Returns the number of elements in the collection.</p>
+<pre><code class="language-crystal">[<span class="n">1</span>, <span class="n">2</span>, <span class="n">3</span>, <span class="n">4</span>].size <span class="c"># =&gt; 4</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/nanoarrow.cr/blob/86265a34de800eb8b0e4fecf72ce4eab5333b527/src/nanoarrow/array.cr#L28" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_s(io:IO):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>to_s</strong>(io : IO) : Nil
+
+        <a class="method-permalink" href="#to_s%28io%3AIO%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class Reference
+            </div>
+          
+          <p>Appends a short String representation of this object
+which includes its class name and its object address.</p>
+<pre><code class="language-crystal"><span class="k">class</span> <span class="t">Person</span>
+  <span class="k">def</span> <span class="m">initialize</span>(@name : <span class="t">String</span>, @age : <span class="t">Int32</span>)
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="t">Person</span>.new(<span class="s">&quot;John&quot;</span>, <span class="n">32</span>).to_s <span class="c"># =&gt; #&lt;Person:0x10a199f20&gt;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/nanoarrow.cr/blob/86265a34de800eb8b0e4fecf72ce4eab5333b527/src/nanoarrow/array.cr#L100" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_unsafe:Pointer(LibNanoarrowBridge::ArrowArray)-instance-method">
+      <div class="signature">
+        
+        def <strong>to_unsafe</strong> : Pointer(LibNanoarrowBridge::ArrowArray)
+
+        <a class="method-permalink" href="#to_unsafe%3APointer%28LibNanoarrowBridge%3A%3AArrowArray%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/nanoarrow.cr/blob/86265a34de800eb8b0e4fecf72ce4eab5333b527/src/nanoarrow/array.cr#L104" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="unsafe_get(index:Int64):T|Nil-instance-method">
+      <div class="signature">
+        abstract 
+        def <strong>unsafe_get</strong>(index : Int64) : T | Nil
+
+        <a class="method-permalink" href="#unsafe_get%28index%3AInt64%29%3AT%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Subclasses implement raw element access (index is already bounds-checked).</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/nanoarrow.cr/blob/86265a34de800eb8b0e4fecf72ce4eab5333b527/src/nanoarrow/array.cr#L14" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+
+</body>
+</html>
